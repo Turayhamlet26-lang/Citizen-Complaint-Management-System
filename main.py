@@ -26,10 +26,15 @@ class Complaint:
         print("Description:", self.description)
         print("Status:", self.status)
 
+    @classmethod
+    def get_office_name(cls):
+        return "Freetown Community Complaint Office"
+
+
 
 class ComplaintManagementSystem:
     def __init__(self):
-        self.office_name = "Freetown Community Complaint Office"
+        self.office_name = self.office_name = Complaint.get_office_name()
         self.complaints = []
         self.filename = "complaints.json"
         self.load_complaints()
